@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import '../config/api_config.dart';
 
 class FormulirScreen extends StatefulWidget {
   final String token;
@@ -60,7 +61,7 @@ class _FormulirScreenState extends State<FormulirScreen> {
           '${tanggalLahir!.year}-${tanggalLahir!.month.toString().padLeft(2, '0')}-${tanggalLahir!.day.toString().padLeft(2, '0')}';
 
       final response = await http.post(
-        Uri.parse('http://localhost:3000/api/pendaftaran'),
+        Uri.parse('$apiBaseUrl/api/pendaftaran'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${widget.token}',

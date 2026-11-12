@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import '../config/api_config.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -18,8 +19,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   bool showPassword = false;
   bool isLoading = false;
-
-  final String baseUrl = 'http://localhost:3000';
 
   Future<void> register() async {
     final nama = namaController.text.trim();
@@ -59,7 +58,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('$baseUrl/api/auth/register'),
+        Uri.parse('$apiBaseUrl/api/auth/register'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'nama': nama,

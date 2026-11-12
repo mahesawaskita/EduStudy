@@ -87237,7 +87237,7 @@ p=4
 i=m.w
 i.toString
 l=""+A.ba(i)+"-"+B.c.oQ(B.h.k(A.bw(i)),2,"0")+"-"+B.c.oQ(B.h.k(A.cy(i)),2,"0")
-i=A.fj("http://localhost:3000/api/pendaftaran")
+i=A.fj("https://edustudy-ppdbsekolah.vercel.app//api/pendaftaran")
 h=t.N
 g=A.ak(["Content-Type","application/json","Authorization","Bearer "+m.a.c],h,h)
 s=7
@@ -87326,7 +87326,7 @@ if(J.cz(e)===0||J.cz(d)===0){m.c.a7(t.R).f.fW(B.PW)
 s=1
 break}m.ad(new A.ami(m))
 p=4
-i=A.fj("http://localhost:3000/api/auth/login")
+i=A.fj("https://edustudy-ppdbsekolah.vercel.app//api/auth/login")
 h=t.N
 g=A.ak(["Content-Type","application/json"],h,h)
 s=7
@@ -87427,7 +87427,7 @@ break}if(!J.d(d,c)){m.c.a7(t.R).f.fW(B.PU)
 s=1
 break}m.ad(new A.ao3(m))
 p=4
-j=A.fj("http://localhost:3000/api/auth/register")
+j=A.fj("https://edustudy-ppdbsekolah.vercel.app//api/auth/register")
 i=t.N
 h=A.ak(["Content-Type","application/json"],i,i)
 s=7

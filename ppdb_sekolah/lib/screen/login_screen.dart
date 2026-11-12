@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import '../config/api_config.dart';
 
 import 'dashboard_screen.dart';
 import 'admin_dashboard_screen.dart';
@@ -21,8 +22,6 @@ class _LoginScreenState extends State<LoginScreen> {
   bool showPassword = false;
   bool isLoading = false;
 
-  final String baseUrl = 'http://localhost:3000';
-
   Future<void> login() async {
     final email = emailController.text.trim();
     final password = passwordController.text;
@@ -38,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('$baseUrl/api/auth/login'),
+        Uri.parse('$apiBaseUrl/api/auth/login'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': email,
