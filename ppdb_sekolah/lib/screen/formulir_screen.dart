@@ -170,7 +170,7 @@ class _FormulirScreenState extends State<FormulirScreen> {
                 const SizedBox(height: 8),
 
                 DropdownButtonFormField<String>(
-                  value: jenisKelamin,
+                  initialValue: jenisKelamin,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Pilih jenis kelamin',
